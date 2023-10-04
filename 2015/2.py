@@ -9,3 +9,11 @@ def wrappingPaperCalculator(input):
                              (box[1] * box[2]), (box[2] * box[0])]
         total += (sum(wrappingPaperSize)*2 + min(wrappingPaperSize))
     print(total)
+
+
+def ribbonCalculator(input):
+    total = 0
+    for i in input:
+        box = sorted([int(x) for x in i.strip().split('x')])
+        total += (box[0] * 2 + box[1] * 2 + box[0] * box[1] * box[2])
+    print(total)

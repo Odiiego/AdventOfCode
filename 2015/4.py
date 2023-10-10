@@ -6,7 +6,7 @@ def getKey():
     while True:
         input = f"iwrupvqb{n}"
         result = hashlib.md5(input.encode())
-        if result.hexdigest()[:5] == "00000":
+        if result.hexdigest()[:6] == "000000":
             print(n)
             return n
         else:
